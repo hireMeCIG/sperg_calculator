@@ -1,5 +1,11 @@
 module Sperg
 
+  class StardardCitizenException < RuntimeError
+    def initialize
+      super("CITIZEN! Something has gone horribly wrong. GET A REFUND!!!")
+    end
+  end
+
   # holy shit this guy sucks
   class KarltimeError < RuntimeError
     def inizialize
