@@ -1,0 +1,16 @@
+  distribution:
+    :base:
+      :price: 45
+      :percent: 25
+
+    :believer:
+      :price: 100
+      :percent: 50
+
+    :whale:
+      :price: 500
+      :percent: 15
+
+    :sperg_whale:
+      :price: 1000
+      :percent: 10
