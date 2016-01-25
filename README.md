@@ -1,24 +1,24 @@
-# OVERVIEW
+## OVERVIEW
 
 I couldn't wrap me freaking head around CIG making 75k a day off idiots.
 So I tried to break it down. Then I wrote a compy prog for it.
 
 
-# DESCRIPTION
+## DESCRIPTION
 
 This was originally designed to calculate the number of daily purchases for different SC "purchase groups" given:
  1. Their price-point
  2. What percent of the daily SC revenue that group contributed to
 
-## Example:
+### Example:
 
-### 4 package type "groups"
+4 package type "groups"
  * base: $45
  * believer: $100 (avg)
  * whale: $500 (avg)
  * sperg whale: $1000 (avg)
 
-### Assume 75,000 per day.
+Assume $75,000 per day.
 
 100% base
  * 1667 Purchases Per Day (PPD)
@@ -49,17 +49,17 @@ This was originally designed to calculate the number of daily purchases for diff
  * 27,375 PPY
 
 
-# USAGE
+## USAGE
 
-## To use this sperg calculator, call the rake tasks.
+### To use this sperg calculator, call the rake tasks.
 
-###Use this handy task to calculate daily theoretical sperg jpeg waste
-> rake calculate
+Use this handy task to calculate daily theoretical sperg jpeg waste
+    $ rake calculate
 
-###Specify what the daily revenue was that day!
-> rake calculate daily_revenue=<INTEGER>
+Specify what the daily revenue was that day!
+    $ rake calculate daily_revenue="some assinine amount"
 
-### Note: We are working on 64-bit precision data for the daily_revenue, expect that in two weeks
+ * Note: We are working on 64-bit precision data for the daily_revenue, expect that in two weeks
 
 Tweak the numbers to craft your own personal sperg's mom's credit-card-backed distribution profile!!!
 Just check out sperg_config.yml
@@ -88,7 +88,7 @@ distribution:
     percent: 10
 
 
-### Usage and Sample Output:
+### Usage with Sample Output:
 $ rake calculate
 
         BASE (25%):
@@ -122,11 +122,11 @@ $
 
 ### Curous about how CIG's funding is going? ME TOO!! Well NOW YOU CAN!!!
 
-$ rake funds:remaining
-PLENTY!
+    $ rake funds:remaining
+      PLENTY!
 
-$ rake funds:audit
-PLENTY! Haha we have enough to make this game twice! LOOK!!! JPEG!! SPECIAL!! FOR YOUUU!!!
+    $ rake funds:audit
+      PLENTY! Haha we have enough to make this game twice! LOOK!!! JPEG!! SPECIAL!! FOR YOUUU!!!
 
 #### You can even specify who the auditor is!
 
