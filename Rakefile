@@ -7,12 +7,17 @@ task :calculate do
 
   # catch unexpected errors at runtime
   #
-  # lol not possible, they're all expected
+  # although at this point, if you don't expect everything
+  # to crash the game your rartarded
   begin
     Sperg::Calculator.calculate_distribution(daily_revenue, get_distribution)
 
   rescue Sperg::MatildaMeltdownException
     freaking_face_mallet!
+
+  rescue Sperg::ShotgunException => e
+    puts "Instead of catching a trivial error caused by a null object, re-throw the error and crash the fucking program"
+    raise e
   end
 end
 

@@ -18,7 +18,7 @@ module Sperg
         if valid_auditor?(auditor)
 
           case auditor
-            when "backer", "nobody important"; return everything_is_fine_by_jpeg_please
+            when "backer", "nobody important"; return everything_is_fine_buy_jpeg_please
             when "investor"; return na_ganna_dat
             when "derek";    return fuck_you
             when "bird";     return "SQUAAAK!!!"
@@ -47,7 +47,7 @@ module Sperg
         end
       end
 
-      def everything_is_fine_by_jpeg_please
+      def everything_is_fine_buy_jpeg_please
         "PLENTY! Haha we have enough to make this game twice! LOOK!!! JPEG!! SPECIAL!! FOR YOUUU!!!"
       end
 

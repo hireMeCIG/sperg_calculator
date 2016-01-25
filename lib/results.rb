@@ -10,7 +10,7 @@ module Sperg
     def initialize(daily_rev)
       @purchase_hash = Hash.new(0)
       @daily_rev = daily_rev
-      @min_monthly_rev = 3e6        # always round up to 3M per month, guys
+      @min_monthly_rev = 3e6        # always round up to 3M per month, guys, otherwise we're fucked!
     end
 
     def add_result(purchases)
@@ -19,8 +19,6 @@ module Sperg
       purchase_hash[:per_year]  += purchases.per_year.value
     end
 
-    # Question: Should we always return at least 50,000 so that Chris doesn't throw
-    # an autistic panic-tantrum?
     def per_day
       optimistic_return(purchase_hash[:per_day], daily_rev, min_daily_rev)
     end
@@ -42,6 +40,7 @@ module Sperg
       end
     end
 
+    # "If you will it, it is no dream" -Walter Sobchak
     def optimisticify(actual_purchases, actual_revenue, happy_revenue)
        rev_per_purchase = actual_revenue / actual_purchases
        revenue_optimism_factor = happy_revenue - actual_revenue      # don't worry. be happy. i learned that in hollywood.

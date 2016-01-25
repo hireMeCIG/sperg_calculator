@@ -1,8 +1,8 @@
 module Sperg
 
-  class StardardCitizenException < RuntimeError
+  class StandardCitizenException < RuntimeError
     def initialize
-      super("CITIZEN! Something has gone horribly wrong. GET A REFUND!!!")
+      super("CITIZEN! Something has gone horribly wrong! GET A REFUND!!!")
     end
   end
 
@@ -20,10 +20,17 @@ module Sperg
     end
   end
 
+  # where are all these goddamn shotguns coming from?
+  class ShotgunException < RuntimeError
+    def initialize
+      super("Fatal Error: A shotgun.")
+    end
+  end
+
   # holy shit you sucks
   class DerpException < RuntimeError
     def initialize(msg)
-      super("DERP!!!" + msg)
+      super("DERP!!! " + msg)
     end
   end
 
