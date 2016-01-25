@@ -1,3 +1,62 @@
+############################################################
+# OVERVIEW
+############################################################
+
+I couldn't wrap me freaking head around CIG making 75k a day off idiots.
+So I tried to break it down. Then I wrote a compy prog for it.
+
+
+############################################################
+# DESCRIPTION
+############################################################
+
+This was originally designed to calculate the number of daily purchases for different SC "purchase groups" given:
+1. Their price-point
+2. What percent of the daily SC revenue that group contributed to
+
+Example:
+
+4 package type "groups"
+base: $45
+believer: $100 (avg)
+whale: $500 (avg)
+*sperg whale: $1000 (avg)
+
+Assume 75,000 per day.
+
+100% base
+1667 Purchases Per Day (PPD)
+608,455 Purchases Per Year (PPY)
+
+50% base, 50% believer
+1208 PPD
+440,920 PPY
+
+25% base, 65% believer, 10% whale
+920 PPD
+335,800 PPY
+
+100% believer
+750 PPD
+273,750 PPY
+
+10% base, 25% believer, 65% whale
+453 PPD
+165,345 PPY
+
+100% whale
+150 PPD
+54,750 PPY
+
+*100% sperg whale
+75 PPD
+27,375 PPY
+
+
+############################################################
+# USAGE
+############################################################
+
 To use this sperg calculator, call the rake tasks.
 
 Use this handy task to calculate daily theoretical sperg jpeg waste
